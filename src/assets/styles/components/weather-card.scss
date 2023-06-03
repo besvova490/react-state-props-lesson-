@@ -1,0 +1,65 @@
+.lsn-weather-card {
+  padding: 26px 92px;
+  border: 2px solid #FFFFFF;
+  background: #3399CC;
+  width: max-content;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+
+  &_full-width {
+    width: 100%;
+  }
+
+  &_color-red {
+    background: #C24747;
+  }
+
+  &_color-orange {
+    background-color: #E2674A;
+  }
+
+  &_dark-pink {
+    background: #996699;
+  }
+
+  &__title {
+    font-size: 22px;
+    line-height: 26px;
+    text-align: center;
+    color: #FFFFFF;
+  }
+
+  &__info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+
+    white-space: nowrap;
+  }
+
+  &__temperature {
+    font-size: 22px;
+    line-height: 26px;
+
+    color: rgba(255, 255, 255, 0.7);
+  }
+
+  &__icon {
+    color: rgba(255, 255, 255, 0.7);
+
+    display: block;
+    width: 32px;
+    height: 32px;
+    flex: 0 0 49px;
+
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
