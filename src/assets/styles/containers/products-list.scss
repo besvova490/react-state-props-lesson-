@@ -1,0 +1,24 @@
+.lsn-products-list {
+  display: grid;
+  grid-template-columns: repeat(4, 320px);
+  width: 100vw;
+  max-width: 1440px;
+
+  padding: 50px;
+  gap: 24px;
+
+  .ant-card-cover {
+    padding: 10px;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    img {
+      object-fit: cover;
+      height: 100%;
+      width: auto;
+      max-width: 100%;
+    }
+  }
+}
