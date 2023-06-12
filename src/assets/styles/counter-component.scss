@@ -1,0 +1,27 @@
+.lsn-counter-component {
+  margin: 100px; 
+
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  &__label {
+    background-color: antiquewhite;
+    border-radius: 4px;
+    padding: 5px;
+
+    width: max-content;
+  }
+
+  &__button {
+    padding: 5px 10px;
+    border: 1px solid;
+
+    width: max-content;
+  }
+
+  &__input {
+    padding: 5px;
+    border: 1px solid;
+  }
+}
