@@ -1,0 +1,12 @@
+.lsn-main-layout {
+  min-height: 100vh;
+
+  &__page-content {
+    flex: 1 1 auto;
+    padding: 16px 24px;
+  }
+
+  &__page-footer {
+    background-color: rgba(0, 0, 0, 0.88);
+  }
+}
