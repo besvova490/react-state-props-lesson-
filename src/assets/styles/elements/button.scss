@@ -1,0 +1,22 @@
+.mdst-button {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  padding: 16px;
+  text-transform: uppercase;
+
+  width: max-content;
+  cursor: pointer;
+  
+  &_type-primary {
+    background-color: #323334;
+    color:#FFF;
+  }
+
+  &_type-secondary {
+    background-color: transparent;
+    border: 1px solid #323334;
+    color:#323334;
+  }
+}
