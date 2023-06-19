@@ -1,5 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom"
+import PropTypes from "prop-types";
 
 // elements
 import Button from "../../elements/Button";
@@ -10,7 +11,6 @@ import "../../assets/styles/containers/banner-sell.scss"
 
 const BannerSell = ({ title, image, price, description, discount, }) => {
   const navigate = useNavigate();
-
 
   return (
     <section className="mdst-banner-sell">
@@ -26,6 +26,7 @@ const BannerSell = ({ title, image, price, description, discount, }) => {
         <Button
           type="secondary"
           onClick={() => navigate("/categories")}
+          data-testid="view-details-button"
         >
           VIEW DETAILS
         </Button>
@@ -33,6 +34,14 @@ const BannerSell = ({ title, image, price, description, discount, }) => {
       <img src={image} alt={title} className="mdst-banner-sell__banner-block__banner-image"/>
     </section>
   );
+};
+
+BannerSell.propTypes = {
+  title: PropTypes.string.isRequired,
+  image: PropTypes.string,
+  price:  PropTypes.number,
+  description: PropTypes.string,
+  discount: PropTypes.number,
 };
 
 export default BannerSell;

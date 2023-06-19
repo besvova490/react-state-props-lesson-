@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Spin } from "antd";
+import { Spin, Card } from "antd";
 
 // container
 import BannerSell from "../../containers/BannerSell";
@@ -20,6 +20,13 @@ import "../../assets/styles/pages/home-page.scss";
 function HomePage() {
   const [productsList, setProductsList] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
+  const [characters, setCharacters] = useState([]);
+
+  useEffect(() => {
+    fetch(`${process.env.REACT_APP_API_URL}/public/characters?apikey=${process.env.REACT_APP_API_KEY}`)
+      .then(res => res.json())
+      .then(resp => setCharacters(resp.data.results));
+  }, []);
 
   const fetchItems = async () => {
     setIsLoading(true);
@@ -33,6 +40,8 @@ function HomePage() {
   useEffect(() => {
     fetchItems();
   }, []);
+
+  console.log(process.env.REACT_APP_API_KEY)
 
   const productsListToRender = productsList.map((item, index) => (
     <SingleProductCard
@@ -68,6 +77,22 @@ function HomePage() {
               </div>
             )
         }
+        <div className="mdst-home-page__top-rating__grid">
+          {
+            characters.map((character, index) => (
+              <Card
+                hoverable
+                key={index}
+                style={{ width: 240 }}
+                cover={
+                  <img alt="example" src={`${character.thumbnail.path}/portrait_xlarge.jpg`} />
+                }
+              >
+                <Card.Meta title={character.name} description={character.description} />
+              </Card>
+            ))
+          }
+        </div>
         <Button>
           load more products
         </Button>
