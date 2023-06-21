@@ -1,6 +1,5 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import { Skeleton } from "antd";
 
 // helpers
 import useFetch from "../../hooks/useFetch";
