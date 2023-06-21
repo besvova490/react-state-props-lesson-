@@ -1,0 +1,32 @@
+.mdst-home-page {
+  display: flex;
+  flex-direction: column;
+  gap: 84px;
+
+  padding: 96px 0;
+
+  &__top-rating {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    color: #323334;
+
+    padding: 0 50px;
+
+    &__title {
+      font-style: normal;
+      font-weight: 700;
+      font-size: 34px;
+      line-height: 40px;
+    }
+
+    &__grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 48px;
+      justify-content: space-between;
+
+      width: 100%;
+    }
+  }
+}

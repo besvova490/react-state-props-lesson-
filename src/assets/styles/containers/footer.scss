@@ -1,0 +1,25 @@
+.mdst-footer {
+  background-color: #323334;
+  padding: 50px 72px 0;
+
+  &__footer {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 16px;
+    color: #FFFFFF;
+    text-align: center;
+
+    background-color: #222222;
+
+    padding: 18px 0;
+  }
+
+  // v2
+  // @media screen and (max-width: 767px) {
+    
+  // }
+}
+
+// v1
+// @import "general-layout-mobile.scss";

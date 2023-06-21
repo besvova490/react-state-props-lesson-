@@ -1,0 +1,21 @@
+.mdst-general-layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+  &__page-content {
+    flex: 1 1 auto;
+
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  // v2
+  // @media screen and (max-width: 767px) {
+    
+  // }
+}
+
+// v1
+// @import "general-layout-mobile.scss";

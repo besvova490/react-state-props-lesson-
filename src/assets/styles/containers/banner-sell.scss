@@ -1,0 +1,64 @@
+.mdst-banner-sell {
+  width: 100%;
+  padding: 109px 147px 63px;
+  color: #323334;
+
+  position: relative;
+  overflow: hidden;
+
+  &__banner-block {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 60px 130px;
+    max-width: 545px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+
+    gap: 16px;
+
+    &__title {
+      font-style: normal;
+      font-weight: 700;
+      font-size: 28px;
+      line-height: 33px;
+      color: inherit;
+    }
+
+    &__price {
+      font-style: normal;
+      font-weight: 700;
+      font-size: 28px;
+      line-height: 33px;
+      color: #7B5136;
+
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start;
+      gap: 26px;
+    }
+
+    &__price-value_discount { text-decoration: line-through; }
+
+    &__description {
+      font-style: normal;
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 22px;
+      color: inherit;
+    }
+
+    &__banner-image {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+
+      top: 0;
+      left: 0;
+  
+      object-fit: cover;
+    }
+  }
+}
