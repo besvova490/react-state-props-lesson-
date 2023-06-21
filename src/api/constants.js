@@ -1,1 +1,1 @@
-export const REST_API_URL = "https://fakestoreapi.com";
+export const REST_API_URL = process.env.REACT_APP_API_URL;
