@@ -6,25 +6,36 @@ import { Skeleton } from "antd";
 import useFetch from "../../hooks/useFetch";
 import products from "../../api/products";
 
+// assets
+import "../../assets/styles/pages/single-product-page.scss";
+
 
 function SingleProductPage() {
   const { productId } = useParams();
 
-  const [productData, isLoading] = useFetch(() => products.getSingleItem(productId));
+  const [productData] = useFetch(() => products.getSingleItem(productId));
+
 
   return (
-    <section>
-      {
-        isLoading
-          ? <Skeleton active/>
-          : (<>
-            <h1>{productData?.title}</h1>
-            <p>
-              {productData?.description}
-            </p>
+    <section className="locl-single-product-page">
+      <div className="locl-single-product-page__body">
+        <div className="locl-single-product-page__left">
+          <div className="locl-single-product-page__main-image">
             <img src={productData?.image} alt="" />
-          </>)
-      }
+          </div>
+          <div className="locl-single-product-page__description">
+            {productData?.description}
+          </div>
+        </div>
+        <div className="locl-single-product-page__body-info">
+          <h1 className="locl-single-product-page__title">{productData?.title}</h1>
+          <p className="locl-single-product-page__price">{productData?.category}</p>
+          <p className="locl-single-product-page__category">{productData?.price} $</p>
+        </div>
+      </div>
+      <div className="locl-single-product-page__footer">
+
+      </div>
     </section>
   )
 };

@@ -1,0 +1,64 @@
+.locl-single-product-page {
+  display: flex;
+  flex-direction: column;
+  gap: 120px;
+
+  padding: 110px 72px;
+
+  &__body {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 24px;
+  }
+
+  &__left {
+    display: flex;
+    flex-direction: column;
+    gap: 46px; 
+  }
+
+  &__main-image {
+    max-width: 846px;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__body-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 28px;
+  }
+
+  &__price,
+  &__title {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 33px;
+    
+    color: #323334;
+  }
+
+
+  &__category {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 21px;
+
+    color: #000000;
+  }
+
+  &__description {
+    padding: 57px 78px;
+    background: #F0EFED;
+    opacity: 0.4;
+  }
+}
