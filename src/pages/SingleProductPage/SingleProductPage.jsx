@@ -1,5 +1,6 @@
 import React from "react";
 import { useParams } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 // helpers
 import useFetch from "../../hooks/useFetch";
@@ -17,6 +18,10 @@ function SingleProductPage() {
 
   return (
     <section className="locl-single-product-page">
+      <Helmet>
+        <title>MOODY STUDIO | {productData?.title || ""}</title>
+        <meta name="description" content={productData?.description || ""} />
+      </Helmet>
       <div className="locl-single-product-page__body">
         <div className="locl-single-product-page__left">
           <div className="locl-single-product-page__main-image">
