@@ -1,18 +1,18 @@
 import React from "react";
 
+// containers
+import Header from "../containers/Header";
+
 
 function ProfileLayout({ children }) {
   return (
-    <div>
-      <header>
+    <div className="mdst-general-layout">
+      <Header/>
 
-      </header>
-      <main>
+      <h2>User Profile page</h2>
+      <main className="mdst-general-layout__page-content">
         { children }
       </main>
-      <div>
-        weather widget
-      </div>
     </div>
   )
 };

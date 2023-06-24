@@ -25,7 +25,10 @@ function SingleProductPage() {
       <div className="locl-single-product-page__body">
         <div className="locl-single-product-page__left">
           <div className="locl-single-product-page__main-image">
-            <img src={productData?.image} alt="" />
+            <img
+              src="https://fastly.picsum.photos/id/365/720/920.jpg?hmac=ROmUZVYbJjYaupKcyVR5i5VeOefh_7oI6BIRbVDVMZw"
+              loading="lazy"
+            />
           </div>
           <div className="locl-single-product-page__description">
             {productData?.description}

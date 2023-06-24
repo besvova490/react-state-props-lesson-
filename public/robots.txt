@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /*.css
+Allow: /*.js
+Disallow: /*?*
+Sitemap: https://fancy-lolly-98d526.netlify.app/products/1
+Allow: 

@@ -34,8 +34,6 @@ function HomePage() {
     fetchItems();
   }, []);
 
-  console.log(process.env.REACT_APP_API_KEY)
-
   const productsListToRender = productsList.map((item, index) => (
     <SingleProductCard
       key={`${index}-${item.title}`}
@@ -45,6 +43,7 @@ function HomePage() {
       rating={item.rating.rate}
       singleItemUrl={`/products/${item.id}`}
       isHorizontal
+      id={item.id}
     />
   ))
 

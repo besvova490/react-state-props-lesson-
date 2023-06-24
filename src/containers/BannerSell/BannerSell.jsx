@@ -39,9 +39,9 @@ const BannerSell = ({ title, image, price, description, discount, }) => {
 BannerSell.propTypes = {
   title: PropTypes.string.isRequired,
   image: PropTypes.string,
-  price:  PropTypes.number,
+  price:  PropTypes.string,
   description: PropTypes.string,
-  discount: PropTypes.number,
+  discount: PropTypes.string,
 };
 
 export default BannerSell;

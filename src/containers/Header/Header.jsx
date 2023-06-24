@@ -1,7 +1,9 @@
 import React from "react";
+import { Badge } from "antd";
 import { Link } from "react-router-dom";
 import { BsSearch, BsBag } from "react-icons/bs";
 import { AiOutlineUser, AiOutlineHeart } from "react-icons/ai";
+import { useSelector } from "react-redux";
 
 // helpers
 import { HEADER_NAVIGATION_LINKS } from "./constants";
@@ -11,6 +13,9 @@ import "../../assets/styles/containers/header.scss";
 
 
 function Header() {
+  const wishList = useSelector(state => state.wishList);
+
+  console.log(wishList.items);
 
   return (
     <header className="mdst-header">
@@ -22,15 +27,17 @@ function Header() {
           <span className="mdst-header__actions__item">
             <BsSearch/>
           </span>
-          <span className="mdst-header__actions__item">
+          <Link to="/profile" className="mdst-header__actions__item">
             <AiOutlineUser/>
-          </span>
+          </Link>
           <span className="mdst-header__actions__item">
             <BsBag/>
           </span>
-          <span className="mdst-header__actions__item">
-            <AiOutlineHeart/>
-          </span>
+          <Badge count={wishList.items.length} showZero>
+            <Link to="/whish-list" className="mdst-header__actions__item">
+              <AiOutlineHeart/>
+            </Link>
+          </Badge>
         </div>
       </div>
       <nav className="mdst-header__navigation">
